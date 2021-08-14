@@ -1,0 +1,26 @@
+{% extends 'shop/basic.html' %}
+{% block title %} Title of About {% endblock %}
+{% block css %}
+img{
+  border :1px solid #ddd;
+  border-radius:4px;
+  padding: 5px;
+  width : 200px;
+}
+{% endblock %}
+
+{% block body %}
+{% load static %}
+
+<p><h2>
+Build an Online Store. Utilize SEO Tools. Connect Social Media Platforms. </h2><h3>Sell More!
+    Utilize Leading Marketing Tools to Boost Your Business and Get Found Online.</h3><b>
+    Simple Tax Calculator. Customizable online store. Mobile optimized. SEO wizard.</b>
+</p>
+<center>
+
+<img src='{% static "shop/rolex.jpg" %}' alt="wrist watch">
+<img src='{% static "shop/mobile.jpg" %}' alt="">
+<img src='{% static "shop/ring.jpg" %}' alt="">
+</center>
+{% endblock %}
