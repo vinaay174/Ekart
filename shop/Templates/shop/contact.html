@@ -21,7 +21,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background: url("shop/image3.jpg");
+	background: url("/static/shop/image3.jpg");
 	background-size: cover;
     }
    .contact .content
@@ -63,21 +63,21 @@
    }
   .container .contactInfo .box .icon
   {
-	min-width: 60px;
-	height: 60px;
-	background: yellow;
+	min-width: 30px;
+	height: 30px;
+	background: red;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	font-size:22px;
+	font-size:32px;
    }
    .container .contactInfo .box .text
    {
 
 	display: flex;
 	margin-left: 20px;
-	font-size: 16px;
+	font-size: 20px;
 	color: black;
 	flex-direction: column;
 	font-weight: 300;
@@ -175,20 +175,10 @@
 
 
      {% load static %}
-     <div class="container-fluid text-right" style="background-color:#fff;">
-   	   <!-- Time is written here-->
-   	   <b><span ng-app="myapp" ng-controller="myCtrl">
-
-      {{time}}</span></b>&nbsp;&nbsp;&nbsp;
-
-      <b><span class="glyphicon glyphicon-earphone"></span>: 7615834732</b> &nbsp;
-      <b><i class="far fa-envelope"></i></span>: Contact@ekart.com</b> &nbsp;
-
-     </div>
 	 <div class="container-fluid">
-          <b><font face="Ink Free" color="brown" size="4px">E-kart <img src="{% static "/shop/logo1.png" %}"
-			  width=30 height=30></font></b> &nbsp;<b class="bg bg-info">
-		      <i>Welcome to India's No.1 E-Commerce site:</i></b>
+          <b><font face="Ink Free" color="brown" size="4px">E-kart <img src="{% static '/shop/logo1.png' %}"
+			  width=30 height=30></font></b> &nbsp;<b class="bg bg-warning">
+		      Welcome to E-Commerce site:</b>
 	 </div>
 
      <section class="contact">
@@ -213,14 +203,14 @@
 			   <div class="icon"><i class="far fa-envelope"></i></div>
 			   <div class="text">
 			     <h3>Email:</h3>
-				 <p><b>Contact@ekart.com</b></p>
+				 <p><b class="bg bg-primary">Contact@ekart.com</b></p>
 			   </div>
 			</div>
 			  <div class="box">
 			   <div class="icon"><i class="fas fa-phone-alt"></i></div>
 			   <div class="text">
 			     <h3>Phone:</h3>
-				 <p><b>Call Us on: +91 7615834732</b></p>
+				 <p><b class="bg bg-primary">Call Us on: +91 7615834732</b></p>
 			   </div>
 			  </div>
 		  </div>
@@ -248,13 +238,4 @@
 		  </div>
 		</div>
 	 </section>
-	 <script>
-	var app=angular.module('myapp',[])
-	app.controller('myCtrl',function($scope,$interval){
-	$scope.time=new Date().toLocaleTimeString()
-	$interval(function(){
-	$scope.time=new Date().toLocaleTimeString()
-    })
-    })
-    </script>
 {% endblock %}
